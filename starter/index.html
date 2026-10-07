@@ -1,101 +1,123 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Sales table as a figure</title>
 
     <style>
-
-        /* ==========================================
-           COMPLETE THE CSS
-           ========================================== */
-
-        figure,
-        figcaption {
-            /* Reset margin and padding */
-        }
-
         figure {
-            /* Add border */
-            /* Set width to 450px */
-            /* Add 15px padding */
+            width: 650px;
+            border: 2px solid black;
+            padding: 15px;
         }
 
         figcaption {
-            /* Display as block */
-            /* Make text bold */
-            /* Center text */
-            /* Set font size to 120% */
-            /* Add bottom padding */
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         table {
-            /* Collapse borders */
-            /* Add border */
-            /* Center the table */
-            /* Add 10px top/bottom margin */
-        }
-
-        thead,
-        tfoot {
-            /* Aqua background */
-            /* Bold text */
-            /* Border */
+            width: 100%;
+            border-collapse: collapse;
         }
 
         th,
         td {
-            /* Add padding */
-            /* Right-align text */
-            /* Add border */
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        thead,
+        tfoot {
+            background-color: aqua;
         }
 
         th:first-child,
         td:first-child {
-            /* Left-align first column */
+            text-align: left;
         }
 
-        tr td:nth-child(2) {
-            /* Center second column */
+        th:nth-child(2),
+        td:nth-child(2) {
+            text-align: center;
         }
 
-        tbody tr:nth-child(2n) {
-            /* Silver background for alternate rows */
+        th:nth-child(3),
+        td:nth-child(3) {
+            text-align: right;
         }
 
+        tbody tr:nth-child(even) {
+            background-color: silver;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
 
     <figure>
-
         <figcaption>Total Sales by Book</figcaption>
 
         <table>
-
             <thead>
                 <tr>
-                    <!-- Add table headings -->
+                    <th>Book</th>
+                    <th>Year Published</th>
+                    <th>Sales</th>
                 </tr>
             </thead>
 
             <tbody>
+                <tr>
+                    <td>PHP and MySQL</td>
+                    <td>2014</td>
+                    <td>$372,381</td>
+                </tr>
 
-                <!-- Add six book records -->
+                <tr>
+                    <td>JavaScript and jQuery</td>
+                    <td>2015</td>
+                    <td>$305,447</td>
+                </tr>
 
+                <tr>
+                    <td>Java Programming</td>
+                    <td>2011</td>
+                    <td>$392,444</td>
+                </tr>
+
+                <tr>
+                    <td>Java Servlets and JSP</td>
+                    <td>2014</td>
+                    <td>$328,992</td>
+                </tr>
+
+                <tr>
+                    <td>ASP.NET with Visual Basic</td>
+                    <td>2011</td>
+                    <td>$351,200</td>
+                </tr>
+
+                <tr>
+                    <td>ASP.NET with C#</td>
+                    <td>2011</td>
+                    <td>$404,332</td>
+                </tr>
             </tbody>
 
             <tfoot>
                 <tr>
-                    <!-- Add total sales -->
+                    <th colspan="2">Total Sales:</th>
+                    <td>$2,154,786</td>
                 </tr>
             </tfoot>
-
         </table>
-
     </figure>
 
 </body>
-
 </html>
